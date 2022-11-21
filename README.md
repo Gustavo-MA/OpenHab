@@ -33,7 +33,11 @@ Instalacion
 ![image](https://user-images.githubusercontent.com/111370930/202963012-d873ca0b-b681-46df-aa3b-ce530d6bbfee.png)
 ![image](https://user-images.githubusercontent.com/111370930/202963071-eebe7762-727b-42bf-a8f0-78e42291e184.png)
 ![image](https://user-images.githubusercontent.com/111370930/202963107-85b1b908-b29a-47cb-9181-f06e0d40e3f7.png)
+![image](https://user-images.githubusercontent.com/111370930/202965539-6b3660ab-8d2f-49fe-bca5-21f39d6c1888.png)
 
+-------------------------------------------------------------------------------
+
+Open Had + Mosquito MQTT
 
 1. Arrancar openHab
 - sudo /bin/systemctl enable openhab.service
@@ -111,6 +115,32 @@ Semantic Property: Temperature
 - ![image](https://user-images.githubusercontent.com/111370930/202964946-c10e6206-2ff5-42e6-b111-1997a2a05c49.png)
 - ![image](https://user-images.githubusercontent.com/111370930/202964976-1c055cd0-e294-4e4b-b190-cd781f4841a8.png)
 ![image](https://user-images.githubusercontent.com/111370930/202964989-c5a1a901-479e-45e5-9ae4-b5fe35941cf7.png)
+![image](https://user-images.githubusercontent.com/111370930/202966012-9dc3a394-18a9-4667-9bc5-5777d1b2e0f8.png)
+![image](https://user-images.githubusercontent.com/111370930/202966034-99e948f7-f4bb-4bae-a664-a4f2d671a27a.png)
+![image](https://user-images.githubusercontent.com/111370930/202966047-911597a1-5e5a-4bbd-83e2-dd75c7908a9e.png)
+![image](https://user-images.githubusercontent.com/111370930/202966065-177afdd9-2411-4987-a434-3591e6816310.png)
+![image](https://user-images.githubusercontent.com/111370930/202966083-2e6dbee1-6c59-45c0-ae64-e2728ed4617e.png)
+![image](https://user-images.githubusercontent.com/111370930/202966111-e0bd4cf9-571d-4323-b4b0-042bb883335c.png)
+![image](https://user-images.githubusercontent.com/111370930/202966155-e98ade95-f5ce-493e-8261-c121bb6c621f.png)
+![image](https://user-images.githubusercontent.com/111370930/202966176-e93c10ba-7507-48a6-82d9-1f666d36e563.png)
+![image](https://user-images.githubusercontent.com/111370930/202966181-d7e3cd49-40ba-4eb7-bb80-2256612af699.png)
+![image](https://user-images.githubusercontent.com/111370930/202966267-b448ac39-13e5-4305-9d11-4851f1bddf25.png)
+![image](https://user-images.githubusercontent.com/111370930/202966303-c45e8365-a5ef-4514-a6d1-99a26c9880a3.png)
+![image](https://user-images.githubusercontent.com/111370930/202966333-28813269-402a-4bc2-81a3-5dcf894f1bf2.png)
+
+![image](https://user-images.githubusercontent.com/111370930/202966359-89230241-a284-4246-9006-751c0c12de38.png)
+
+![image](https://user-images.githubusercontent.com/111370930/202966382-46ac7c3b-4fb0-4707-a459-711cd6fa95e2.png)
+![image](https://user-images.githubusercontent.com/111370930/202966425-fd401969-0a9e-4f7d-b10b-8cdfa64c97df.png)
+![image](https://user-images.githubusercontent.com/111370930/202966464-b0ca423d-cffc-4565-88ff-fd15f2a05faf.png)
+
+
+
+
+
+
+
+
 
 
 
