@@ -134,7 +134,55 @@ Semantic Property: Temperature
 ![image](https://user-images.githubusercontent.com/111370930/202966425-fd401969-0a9e-4f7d-b10b-8cdfa64c97df.png)
 ![image](https://user-images.githubusercontent.com/111370930/202966464-b0ca423d-cffc-4565-88ff-fd15f2a05faf.png)
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
+INDICADOR LED
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1. Arrancar OpenHab
+- sudo systemctl start openhab.service
+
+2. Agregar un led a la sala
+
+Thing
+Unique ID: LEDSala
+Identifier: mqtt:topic:LEDSala
+Label: LED Sala
+Location: Sala Location
+Bridge: MQTT Broker
+
+Channel
+Channel Identifier: LEDSalaChannelIdentifier
+Label: LED Sala Channel Identifier
+Channel Type: On/Off Switch
+
+MQTT StateTopic: codigoIoT/openHab/Departamento/Sala/Escritorio/LED01
+
+Equipment
+Thing: LED Sala
+Name: LEDSalaEquipment
+Label: LED Sala Equipment
+Category: Light
+Semantic Class: Lightbulb
+Channel: LED Sala Channel Identifier
+Name: LEDSalaEquipment_LEDSalaChannelIdentifier
+Label: LED Sala Channel Identifier
+Type: Switch
+Category: Light
+Semantic Class: Switch
+Semantic Property: Light
+
+3. Enviar el estatus del LED
+- mosquitto_pub -h localhost -t codigoIoT/openHab/Departamento/Sala/Escritorio/LED01 -m "ON"
+
+4. Agregar un Switch a la sala
+- Configurar correctamente el Type a Switch
+- Configurar correctamente el tema a Command
+- Activar la casilla Is Command
+
+
+![image](https://user-images.githubusercontent.com/111370930/203386588-75b3a5fb-d376-46bf-b6f8-58838e0f11f8.png)
 
 
 
