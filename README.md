@@ -185,6 +185,97 @@ Semantic Property: Light
 ![image](https://user-images.githubusercontent.com/111370930/203386588-75b3a5fb-d376-46bf-b6f8-58838e0f11f8.png)
 ![image](https://user-images.githubusercontent.com/111370930/203386984-5d968d61-adb5-455e-a16f-f5ebf7185443.png)
 
+//////////////////////////////////////////////////////////////////////////////////////////
+Reglas
+/////////////////////////////////////////////////////////////////////////////////////////
+# OpenHab
+
+1. Arrancar OpenHab
+- sudo systemctl startar openhab.service
+- http://localhost:8080/
+
+2. Crear los Things, canales y equipamientos necesarios para contar con:
+- Sensor de temperatura
+- Sensor de Humedad
+- LED
+- Switch
+
+Sensor de humedad
+Unique ID: SensorHumedad
+Identifier: mqtt:topic:SensorHumedad
+Label: Sensor Humedad
+Location: Escritorio
+Bridge: MQTT Broker
+
+Channel Sensor de Humedad
+Channel Identifier: SensorHumedadChannelIdentifier
+Label: Sensor Humedad Channel
+Channel Type: Number Value
+MQTT State Topic: codigoIoT/openHab/Departamento/Sala/Escritorio/DHT11/humedad
+Absolute Minimum: 0
+Absolute Maximum: 100
+Delta value: 1
+Unit of measurement: %
+
+Switch
+Unique ID: Switch1
+Identifier: mqtt:topic:Switch1
+Label: Switch 1
+Location: Escritorio
+Bridge: MQTT Broker
+
+Channel Switch 1
+Channel Identifier: Switch1ChannelIdentifier
+Label: Switch 1 Channel
+Channel Type: On/Off Switch
+MQTT Command Topic: codigoIoT/openHab/Departamento/Sala/Escritorio/Switch1
+Is Command: On
+
+Sensor de Humedad Equipamiento
+Thing: Sensor de Humedad
+Name: SensorHumedadEquipment
+Label: Sensor Humedad Equipamiento
+Category: humidity
+Semantic Class: Sensor
+Channel: Sensor Humedad Channel
+Name: SensorHumedadEquipment_SensorHumedadChannel
+Label: Sensor Humedad Channel Equipment
+Type: Numbar
+Category: Humidity
+Semantic Class: Measurement
+Semantic Property: Humidity
+
+Switch
+Thing: Switch 1
+Name: Switch1Equipment
+Label: Switch 1 Equipment
+Category: Switch
+Semantic Class: Equipment
+Channel: Switch 1 Channel
+Name: Switch1Equipment_Switch1ChannelEquipment
+Label: Switch 1 Channel Equipment
+Type: SwitchSobreTemperatura
+Category: switch
+Semantic Class: Switch
+Semantic Property: None
+
+3. Comprobar el funcionamiento de los equipamientos registrados
+
+- mosquitto_pub -h localhost -t codigoIoT/openHab/Departamento/Sala/Escritorio/DHT11/temp -m 22.5
+
+- mosquitto_pub -h localhost -t codigoIoT/openHab/Departamento/Sala/Escritorio/DHT11/humedad -m 51
+
+- mosquitto_pub -h localhost -t codigoIoT/openHab/Departamento/Sala/Escritorio/LED01 -m "ON"
+
+- mosquitto_sub -h localhost -t codigoIoT/openHab/Departamento/Sala/Escritorio/Switch1
+
+![image](https://user-images.githubusercontent.com/111370930/203856664-5ff48911-74b6-4e4e-af35-9f90e2ea20a2.png)
+
+![image](https://user-images.githubusercontent.com/111370930/203856696-b0b18c2c-2739-478c-a11c-b7932dfc3d6b.png)
+
+
+![image](https://user-images.githubusercontent.com/111370930/203856718-59d16215-da25-454a-9a15-bb84f7c288f2.png)
+
 
 
 
